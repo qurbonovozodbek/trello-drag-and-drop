@@ -80,7 +80,7 @@ const Board: React.FC = () => {
     });
 
     setLists(updatedLists);
-    setNewTaskContent(""); // Clear input after adding task
+    setNewTaskContent("");
   };
 
   return (
