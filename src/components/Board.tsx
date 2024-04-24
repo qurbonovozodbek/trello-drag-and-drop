@@ -44,7 +44,6 @@ const Board: React.FC = () => {
     const updatedLists = [...lists];
 
     if (source.droppableId === destination.droppableId) {
-      // Reorder within the same list
       const list = updatedLists.find((list) => list.id === source.droppableId);
       if (list) {
         const [removed] = list.items.splice(source.index, 1);
@@ -52,7 +51,6 @@ const Board: React.FC = () => {
         setLists(updatedLists);
       }
     } else {
-      // Move to a different list
       const sourceList = updatedLists.find((list) => list.id === source.droppableId);
       const destinationList = updatedLists.find((list) => list.id === destination.droppableId);
       const draggedItem = sourceList?.items[source.index];
